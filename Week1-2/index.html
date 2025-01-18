@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Website</title>
+    <style>
+        /* Yleinen tyyli */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* Kiinteä header */
+        header {
+            position: fixed;
+            top: 0;
+            height: 60px;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sisältöosat */
+        section {
+            padding: 100px 20px;
+            margin-top: 60px; /* Korvaa headerin korkeus */
+            height: 100vh;
+            scroll-snap-align: start;
+        }
+
+        #section1 {
+            background-color: #f4f4f4;
+        }
+
+        #section2 {
+            background-color: #eaeaea;
+        }
+
+        #section3 {
+            background-color: #dcdcdc;
+        }
+
+        /* Scroll-snap-tyyli */
+        html {
+            scroll-snap-type: y mandatory;
+        }
+
+        /* Footer-tyyli */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#section1">Section 1</a>
+            <a href="#section2">Section 2</a>
+            <a href="#section3">Section 3</a>
+        </nav>
+    </header>
+
+    <section id="section1">
+        <h1>Section 1</h1>
+        <p>This is the first section of the page. Scroll down to explore more.</p>
+    </section>
+
+    <section id="section2">
+        <h1>Section 2</h1>
+        <p>This is the second section of the page. Keep scrolling!</p>
+    </section>
+
+    <section id="section3">
+        <h1>Section 3</h1>
+        <p>This is the third section of the page. You made it!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Your Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
