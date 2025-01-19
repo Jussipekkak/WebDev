@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>SINGLE PAGE WEBSITE</h1>
+        <nav>
+            <a href="#section1">About Me</a>
+            <a href="#section2">Projects</a>
+            <a href="#section3">Contact</a>
+        </nav>
+    </header>
+
+    <section id="section1">
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada eros vel mauris suscipit, eu dictum lectus condimentum. Integer viverra massa sit amet risus tristique tincidunt.</p>
+        <div class="section-image"></div>
+    </section>
+
+    <section id="section2">
+        <h2>Projects</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae libero at felis tempus fermentum. Donec sagittis orci in magna egestas convallis.</p>
+        <div class="section-image"></div>
+    </section>
+
+    <section id="section3">
+        <h2>Contact</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit lorem vitae augue mollis suscipit. Duis euismod, lacus non interdum placerat, urna nulla tincidunt arcu, at tempor nisi nulla nec felis.</p>
+        <form id="contactForm">
+            <label for="name">Nimi:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Sähköposti:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Viesti:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Lähetä</button>
+        </form>
+        <div class="section-image"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Your Website. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
