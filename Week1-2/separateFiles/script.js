@@ -9,7 +9,5 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     console.log('Sähköposti:', email);
     console.log('Viesti:', message);
 
-    alert('Lomake lähetetty onnistuneesti!');
-
     document.getElementById('contactForm').reset();
 });

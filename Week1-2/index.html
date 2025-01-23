@@ -155,11 +155,11 @@ footer p {
 
 /* Responsiiviset tyylit */
 
-@media (min-width: 1335px) {
+@media (min-width: 800px) {
 
     section form {
     position: absolute;
-    left: 20;
+    left: 20px;
     margin-top: 200px;
     display: flex;
     flex-direction: column;
@@ -194,25 +194,49 @@ footer p {
         padding: 5px 10px;
     }
 
-    section {
-        flex-direction: column;
-        padding: 70px 10px;
-        
+    #section1 p {
+        order: 1; /* Teksti ensimmäiseksi */
+        width: 100%; /* Koko leveys */
+        text-align: center; /* Keskitetään teksti */
+    }
+    #section2 p {
+        order: 1; /* Teksti ensimmäiseksi */
+        width: 100%; /* Koko leveys */
+        text-align: center; /* Keskitetään teksti */
+    }
+    #section p {
+        order: 1; /* Teksti ensimmäiseksi */
+        width: 100%; /* Koko leveys */
+        text-align: center; /* Keskitetään teksti */
     }
 
-    section p, section form {
-        width: 90%;
-        margin: 20px 0;
+
+    #section3 p {
+        order: 1; /* Teksti ensimmäiseksi */
+        width: 100%; /* Koko leveys */
+        text-align: center; /* Keskitetään teksti */
+    }
+
+    #section3 form {
+        order: 2; /* Lomake toiseksi */
+        width: 100%; /* Koko leveys */
+        margin-top: 20px; /* Lisää tilaa tekstin ja lomakkeen väliin */
     }
 
     .section-image {
-
         width: 0px;
         height: 0px;
-
-
     }
 }
+
+@media (max-width: 400px) {
+
+    header {
+    height: 20%;
+
+}
+}
+
     </style>
 </head>
 <body>
@@ -239,7 +263,7 @@ footer p {
 
     <section id="section3">
         <h2>Contact</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit lorem vitae augue mollis suscipit. Duis euismod, lacus non interdum placerat, urna nulla tincidunt arcu, at tempor nisi nulla nec felis.</p>
+        
         <form id="contactForm">
             <label for="name">Nimi:</label>
             <input type="text" id="name" name="name" required>
