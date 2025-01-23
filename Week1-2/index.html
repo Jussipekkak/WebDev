@@ -1,305 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Single Page Website</title>
-    <style>
-        /* Yleinen tyyli */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-}
-
-/* Kiinteä header */
-header {
-    position: fixed;
-    top: 0;
-    height: 80px;
-    width: 100%;
-    background: linear-gradient(to bottom, #333, #555);
-    color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-header nav {
-    margin-right: 50px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-header a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-header a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-/* Sisältöosat */
-section {
-    padding: 100px 20px;
-    height: 80vh;
-    scroll-snap-align: start;
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-section h1 {
-    margin-top: 0;
-    width: 100%;
-}
-
-section p, section form {
-    width: 45%;
-    margin-top: 50px;
-}
-
-.section-image {
-    width: 50%;
-    height: 80%;
-    background-size: cover;
-    background-position: center;
-    border-top-left-radius: 1500px;
-    border-bottom-left-radius: 1500px;
-    position: absolute;
-    right: 0;
-    top: 100px;
-}
-#section3{
-    height: 70vh;
-}
-#section1 .section-image {
-            background-image: url('Res/5A4MtxO-fly-fishing-wallpaper.jpg');
-        }
-
-        #section2 .section-image {
-            background-image: url('Res/Leonardo_Phoenix_Create_a_highdefinition_black_and_white_photo_2.jpg');
-        }
-
-        #section3 .section-image {
-            background-image: url('Res/Leonardo_Vision_XL_Create_HD_black_and_white_simple_blurred_of_0.jpg');
-        }
-
-/* Lomakkeen tyyli */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-input, textarea, button {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #333;
-    color: white;
-    cursor: pointer;
-    border: none;
-}
-
-button:hover {
-    background-color: #555;
-}
-
-/* Scroll-snap-tyyli */
-html {
-    scroll-snap-type: y mandatory;
-}
-
-/* Footer-tyyli */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Responsiiviset tyylit */
-
-@media (min-width: 800px) {
-
-    section form {
-    position: absolute;
-    left: 20px;
-    margin-top: 200px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-
-}
-@media (max-width: 800px) {
-    header {
-    width: 95vw;
-
-}
-    header h1 {
-        font-size: 20px;
-    }
-    html {
-    scroll-snap-type: none;
-}
-
-    header nav {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    header a {
-        font-size: 16px;
-        padding: 5px 10px;
-    }
-
-    #section1 p {
-        order: 1; /* Teksti ensimmäiseksi */
-        width: 100%; /* Koko leveys */
-        text-align: center; /* Keskitetään teksti */
-    }
-    #section2 p {
-        order: 1; /* Teksti ensimmäiseksi */
-        width: 100%; /* Koko leveys */
-        text-align: center; /* Keskitetään teksti */
-    }
-    #section p {
-        order: 1; /* Teksti ensimmäiseksi */
-        width: 100%; /* Koko leveys */
-        text-align: center; /* Keskitetään teksti */
-    }
-
-
-    #section3 p {
-        order: 1; /* Teksti ensimmäiseksi */
-        width: 100%; /* Koko leveys */
-        text-align: center; /* Keskitetään teksti */
-    }
-
-    #section3 form {
-        order: 2; /* Lomake toiseksi */
-        width: 100%; /* Koko leveys */
-        margin-top: 20px; /* Lisää tilaa tekstin ja lomakkeen väliin */
-    }
-
-    .section-image {
-        width: 0px;
-        height: 0px;
-    }
-}
-
-@media (max-width: 400px) {
-
-    header {
-    height: 20%;
-
-}
-}
-
-    </style>
+    <title>Moderni Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>SINGLE PAGE WEBSITE</h1>
-        <nav>
-            <a href="#section1">About Me</a>
-            <a href="#section2">Projects</a>
-            <a href="#section3">Contact</a>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">Oma Portfolio</div>
+            <div class="nav-links">
+                <a href="#etusivu">Etusivu</a>
+                <a href="#tietoa">Tietoa</a>
+                <a href="#projektit">Projektit</a>
+                <a href="#yhteys">Yhteystiedot</a>
+            </div>
+        </div>
+    </nav>
 
-    <section id="section1">
-        <h2>About Me</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada eros vel mauris suscipit, eu dictum lectus condimentum. Integer viverra massa sit amet risus tristique tincidunt.</p>
-        <div class="section-image"></div>
-    </section>
+    <main>
+        <section id="etusivu" class="section hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Tervetuloa matkalleni</h1>
+                <p class="hero-subtitle">Olen kehittäjä, joka rakastaa luovaa ongelmanratkaisua</p>
+                <a href="#tietoa" class="cta-button">Lue lisää</a>
+            </div>
+        </section>
 
-    <section id="section2">
-        <h2>Projects</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae libero at felis tempus fermentum. Donec sagittis orci in magna egestas convallis.</p>
-        <div class="section-image"></div>
-    </section>
+        <section id="tietoa" class="section about">
+            <div class="section-content">
+                <h2 class="section-title">Kuka olen</h2>
+                <div class="about-cards">
+                    <div class="about-card">
+                        <h3>Taidot</h3>
+                        <ul>
+                            <li>Web-kehitys</li>
+                            <li>React</li>
+                            <li>JavaScript</li>
+                            <li>Suunnittelu</li>
+                        </ul>
+                    </div>
+                    <div class="about-card">
+                        <h3>Kokemus</h3>
+                        <p>Yli 5 vuotta kokemusta web-kehityksestä. Intohimoinen teknologian ja jatkuvan oppimisen ystävä.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Koulutus</h3>
+                        <p>Tietotekniikan diplomi-insinööri</p>
+                        <p>Erikoistunut web-teknologioihin</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Kiinnostuksen kohteet</h3>
+                        <ul>
+                            <li>Avoimen lähdekoodin projektit</li>
+                            <li>Pilvipalvelut</li>
+                            <li>Käyttäjäkokemus</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="section3">
-        <h2>Contact</h2>
-        
-        <form id="contactForm">
-            <label for="name">Nimi:</label>
-            <input type="text" id="name" name="name" required>
+        <section id="projektit" class="section projects">
+            <div class="section-content">
+                <h2 class="section-title">Projektini</h2>
+                <div class="projects-cards">
+                    <div class="project-card">
+                        <h3>Projekti 1</h3>
+                        <p>Lyhyt kuvaus projektista ja sen teknologioista</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Projekti 2</h3>
+                        <p>Lyhyt kuvaus projektista ja sen teknologioista</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Projekti 3</h3>
+                        <p>Lyhyt kuvaus projektista ja sen teknologioista</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <label for="email">Sähköposti:</label>
-            <input type="email" id="email" name="email" required>
+        <section id="yhteys" class="section contact">
+            <div class="section-content">
+                <h2 class="section-title">Ota yhteyttä</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="Nimesi" required>
+                    <input type="email" placeholder="Sähköpostisi" required>
+                    <textarea placeholder="Viestisi" required></textarea>
+                    <button type="submit">Lähetä viesti</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
-            <label for="message">Viesti:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit">Lähetä</button>
-        </form>
-        <div class="section-image"></div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Your Website. All rights reserved.</p>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; <span id="current-year"></span> Oma Portfolio</p>
+            <div class="social-links">
+                <a href="#" class="social-icon">GitHub</a>
+                <a href="#" class="social-icon">LinkedIn</a>
+                <a href="#" class="social-icon">Twitter</a>
+            </div>
+        </div>
     </footer>
 
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            console.log('Nimi:', name);
-            console.log('Sähköposti:', email);
-            console.log('Viesti:', message);
-
-            const responseMessage = document.getElementById('formResponse');
-            responseMessage.style.display = 'block';
-
-            document.getElementById('contactForm').reset();
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
