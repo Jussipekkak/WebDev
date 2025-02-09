@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderni Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --background-color: #f4f4f4;
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .navbar {
+            position: fixed;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+        }
+
+        .section-content {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: var(--secondary-color);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary-color);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+
+        .about-cards, .projects-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .about-card, .project-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .about-card:hover, .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .about-card h3, .project-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .about-card ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .about-card ul li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .about-card ul li:last-child {
+            border-bottom: none;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            color: white;
+            margin: 0 0.5rem;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">Oma Portfolio</div>
+            <div class="nav-links">
+                <a href="#etusivu">Etusivu</a>
+                <a href="#tietoa">Tietoa</a>
+                <a href="#projektit">Projektit</a>
+                <a href="#yhteys">Yhteystiedot</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="etusivu" class="section hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Tervetuloa matkalleni</h1>
+                <p class="hero-subtitle">Olen kehittäjä, joka rakastaa luovaa ongelmanratkaisua</p>
+                <a href="#tietoa" class="cta-button">Lue lisää</a>
+            </div>
+        </section>
+
+        <section id="tietoa" class="section about">
+            <div class="section-content">
+                <h2 class="section-title">Kuka olen</h2>
+                <div class="about-cards">
+                    <div class="about-card">
+                        <h3>Taidot</h3>
+                        <ul>
+                            <li>Web-kehitys</li>
+                            <li>React</li>
+                            <li>JavaScript</li>
+                            <li>Suunnittelu</li>
+                        </ul>
+                    </div>
+                    <div class="about-card">
+                        <h3>Kokemus</h3>
+                        <p>Yli 5 vuotta kokemusta web-kehityksestä. Intohimoinen teknologian ja jatkuvan oppimisen ystävä.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Koulutus</h3>
+                        <p>Tietotekniikan diplomi-insinööri</p>
+                        <p>Erikoistunut web-teknologioihin</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Kiinnostuksen kohteet</h3>
+                        <ul>
+                            <li>Avoimen lähdekoodin projektit</li>
+                            <li>Pilvipalvelut</li>
+                            <li>Käyttäjäkokemus</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projektit" class="section projects">
+            <div class="section-content">
+                <h2 class="section-title">Projektini</h2>
+                <div class="projects-cards">
+                    <div class="project-card">
+                        <h3>Projekti 1</h3>
+                        <p>Lyhyt kuvaus projektista ja sen teknologioista</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Projekti 2</h3>
+                        <p>Lyhyt kuvaus projektista ja sen teknologioista</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Projekti 3</h3>
+                        <p>Lyhyt kuvaus projektista ja sen teknologioista</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="yhteys" class="section contact">
+            <div class="section-content">
+                <h2 class="section-title">Ota yhteyttä</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="Nimesi" required>
+                    <input type="email" placeholder="Sähköpostisi" required>
+                    <textarea placeholder="Viestisi" required></textarea>
+                    <button type="submit">Lähetä viesti</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; <span id="current-year"></span> Oma Portfolio</p>
+            <div class="social-links">
+                <a href="#" class="social-icon">GitHub</a>
+                <a href="#" class="social-icon">LinkedIn</a>
+                <a href="#" class="social-icon">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelector('.nav-links');
+            const links = navLinks.querySelectorAll('a');
+            
+            function updateNavigation() {
+                const screenWidth = window.innerWidth;
+                
+                if (screenWidth <= 768) {
+                    // Poista Etusivu-linkki ensin
+                    if (links[0].textContent === 'Etusivu') {
+                        links[0].remove();
+                    }
+                    
+                    // Jos näyttö on vielä pienempi, poista Yhteystiedot-linkki
+                    if (screenWidth <= 600 && links.length > 2) {
+                        links[links.length - 1].remove();
+                    }
+                }
+            }
+
+            // Lisää tapahtumankuuntelija näytön koon muutoksille
+            window.addEventListener('resize', updateNavigation);
+            
+            // Suorita aluksi
+            updateNavigation();
+
+            // Nykyinen vuoden asetus
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            const contactForm = document.querySelector('.contact-form');
+            
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const name = contactForm.querySelector('input[type="text"]').value;
+                const email = contactForm.querySelector('input[type="email"]').value;
+                const message = contactForm.querySelector('textarea').value;
+                
+                console.log('Lomake lähetetty:', { name, email, message });
+                
+                contactForm.reset();
+                
+                alert('Viestisi on lähetetty!');
+            });
+        });
+    </script>
+</body>
+</html>
