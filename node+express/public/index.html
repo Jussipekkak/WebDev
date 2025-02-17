@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderni Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">Oma Portfolio</div>
+            <div class="nav-links">
+                <a href="#etusivu">Etusivu</a>
+                <a href="#tietoa">Tietoa</a>
+                <a href="#projektit">Projektit</a>
+                <a href="#yhteys">Yhteystiedot</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="etusivu" class="section hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Tervetuloa matkalleni</h1>
+                <p class="hero-subtitle">Olen kehittäjä, joka rakastaa luovaa ongelmanratkaisua</p>
+                <a href="#tietoa" class="cta-button">Lue lisää</a>
+            </div>
+        </section>
+
+        <section id="tietoa" class="section about">
+            <div class="section-content">
+                <h2 class="section-title">Kuka olen</h2>
+                <div class="about-cards">
+                    <div class="about-card">
+                        <h3>Taidot</h3>
+                        <ul>
+                            <li>Web-kehitys</li>
+                            <li>React</li>
+                            <li>JavaScript</li>
+                            <li>Suunnittelu</li>
+                        </ul>
+                    </div>
+                    <div class="about-card">
+                        <h3>Kokemus</h3>
+                        <p>Yli 5 vuotta kokemusta web-kehityksestä. Intohimoinen teknologian ja jatkuvan oppimisen ystävä.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Koulutus</h3>
+                        <p>Tietotekniikan diplomi-insinööri</p>
+                        <p>Erikoistunut web-teknologioihin</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Kiinnostuksen kohteet</h3>
+                        <ul>
+                            <li>Avoimen lähdekoodin projektit</li>
+                            <li>Pilvipalvelut</li>
+                            <li>Käyttäjäkokemus</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projektit" class="section projects">
+            <div class="section-content">
+                <h2 class="section-title">Projektini</h2>
+                <div class="projects-cards">
+                    <div class="project-card">
+                        <h3>Projekti 1</h3>
+                        <p>Lyhyt kuvaus projektista ja sen teknologioista</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Projekti 2</h3>
+                        <p>Lyhyt kuvaus projektista ja sen teknologioista</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Projekti 3</h3>
+                        <p>Lyhyt kuvaus projektista ja sen teknologioista</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="yhteys" class="section contact">
+            <div class="section-content">
+                <h2 class="section-title">Ota yhteyttä</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="Nimesi" required>
+                    <input type="email" placeholder="Sähköpostisi" required>
+                    <textarea placeholder="Viestisi" required></textarea>
+                    <button type="submit">Lähetä viesti</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; <span id="current-year"></span> Oma Portfolio</p>
+            <div class="social-links">
+                <a href="#" class="social-icon">GitHub</a>
+                <a href="#" class="social-icon">LinkedIn</a>
+                <a href="#" class="social-icon">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
