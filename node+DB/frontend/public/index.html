@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Käyttäjähallinta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">Käyttäjähallinta</div>
+            <div class="nav-links">
+                <a href="#etusivu">Etusivu</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="etusivu" class="section hero">
+            <div class="crud-test-container">
+                <h2>Käyttäjähallinta</h2>
+                <div class="crud-operations">
+                    <!-- Create Form -->
+                    <div class="crud-form">
+                        <h3>Lisää uusi käyttäjä</h3>
+                        <input type="text" id="nameInput" placeholder="Nimi">
+                        <input type="email" id="emailInput" placeholder="Sähköposti">
+                        <label for="AdminInput">
+                            <input type="checkbox" id="AdminInput"> Admin?
+                        </label>
+                        
+                        <button id="createBtn">Lisää käyttäjä</button>
+                    </div>
+            
+                    <!-- Read Section -->
+                    <div class="items-container">
+                        <h3>Käyttäjälista</h3>
+                        <ul id="usersList">
+                            <!-- Käyttäjät lisätään dynaamisesti -->
+                        </ul>
+                    </div>
+            
+                    <!-- Update Form -->
+                    <div class="crud-form">
+                        <h3>Päivitä käyttäjä</h3>
+                        <input type="text" id="updateNameInput" placeholder="Päivitettävä nimi">
+                        <input type="email" id="updateEmailInput" placeholder="Päivitettävä sähköposti">
+                        <label for="updateIsAdminInput">
+                            <input type="checkbox" id="updateIsAdminInput"> Admin?
+                        </label>
+                        <input type="hidden" id="updateId">
+                        <button id="updateBtn">Päivitä käyttäjä</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
