@@ -1,0 +1,514 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --background-color: #f4f4f4;
+  --text-color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background-color: var(--secondary-color);
+}
+
+.hero-title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.projects-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-card h3 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+
+.section-content {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: #34495e;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: white;
+  color: var(--primary-color);
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.about-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+}
+
+.about-card h3 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+
+.about-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-card ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.about-card ul li:last-child {
+  border-bottom: none;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.skill-item {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.project-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.contact-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.social-links {
+  margin-top: 1rem;
+}
+
+.social-icon {
+  color: white;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+
+/* CRUD Styles */
+.crud-test-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 1200px;
+}
+
+.crud-operations {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.crud-form {
+  background-color: var(--background-color);
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 30%;
+}
+
+.crud-form h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+
+.crud-form input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.crud-form input[type="text"]:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.crud-form button,
+.items-container button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.items-container {
+  background-color: var(--background-color);
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 40%;
+}
+
+.items-container h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+
+#itemsList {
+  list-style: none;
+  padding: 0;
+}
+
+#itemsList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#itemsList li button {
+  margin-left: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .crud-operations {
+      flex-direction: column;
+  }
+  
+  .crud-form,
+  .items-container {
+      width: 100%;
+  }
+}
+
+#usersList {
+  list-style: none;
+  padding: 0;
+}
+
+#usersList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333; /* Tumma teksti */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#usersList li span {
+  flex-grow: 1;
+  margin-right: 1rem;
+  color: #2c3e50; /* Vielä tummempi teksti parempaa kontrastia varten */
+  font-weight: 500; /* Hieman paksumpi fontti luettavuuden parantamiseksi */
+}
+
+#usersList li button {
+  margin-left: 0.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#usersList li button:hover {
+  background-color: var(--secondary-color);
+}
+
+#usersList li button:first-of-type {
+  background-color: #3498db; /* Sininen muokkausnappi */
+}
+
+#usersList li button:last-of-type {
+  background-color: #e74c3c; /* Punainen poistonappi */
+}
+
+/* Yhtenäiset syötekentät */
+.crud-form input[type="text"],
+.crud-form input[type="email"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  height: 42px; /* Kiinteä korkeus kaikille syötekentille */
+  box-sizing: border-box;
+}
+
+.crud-form input[type="text"]:focus,
+.crud-form input[type="email"]:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+/* Yhtenäiset napit käyttäjälistassa */
+#usersList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#usersList li span  {
+  flex-grow: 1;
+  margin-right: 1rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+label[for="AdminInput"] {
+  color: #2c3e50; /* Sama väri kuin käyttäjälistassa */
+  font-weight: 500;
+}
+
+label[for="updateIsAdminInput"] {
+  color: #2c3e50; /* Sama väri kuin käyttäjälistassa */
+  font-weight: 500;
+}
+
+
+#usersList li div {
+  display: flex;
+  gap: 0.75rem; /* Tasainen väli nappien välillä */
+}
+
+#usersList li button {
+  min-width: 80px; /* Kiinteä minimileveys kaikille napeille */
+  height: 36px; /* Kiinteä korkeus kaikille napeille */
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+#usersList li button:first-of-type {
+  background-color: #3498db;
+}
+
+#usersList li button:last-of-type {
+  background-color: #e74c3c;
+}
+
+#usersList li button:hover {
+  opacity: 0.9;
+}
+
+/* Lomakkeiden napit */
+.crud-form button {
+  min-width: 120px; /* Kiinteä minimileveys lomakkeiden napeille */
+  height: 42px; /* Kiinteä korkeus lomakkeiden napeille */
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.crud-form button:hover {
+  background-color: var(--secondary-color);
+}
